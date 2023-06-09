@@ -1,0 +1,33 @@
+[versions]
+androidGradlePlugin = "8.0.0"
+androidLibraryPlugin = "8.0.0"
+jetbrainsKotlinAndroidPlugin = "1.7.20"
+navigation = "2.5.3"
+ktx = "1.8.0"
+lifecycle = "2.3.1"
+compose = "1.5.1"
+compose_bom = "2022.10.00"
+junit = "4.13.2"
+
+[libraries]
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "compose" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose_bom" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+[bundles]
+compose = ["compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3", "activity-compose", "navigation-compose"]
+compose-debug = ["compose-ui-tooling", "compose-ui-test-manifest"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidLibraryPlugin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "jetbrainsKotlinAndroidPlugin" }

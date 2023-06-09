@@ -1,0 +1,19 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+android {
+    namespace 'br.com.fooddeliveryapp.features.home.pub'
+    compileSdk 33
+}
+
+dependencies {
+    implementation libs.core.ktx
+    implementation platform(libs.compose.bom)
+    implementation libs.bundles.compose
+
+    testImplementation libs.junit
+
+    debugImplementation libs.bundles.compose.debug
+}
