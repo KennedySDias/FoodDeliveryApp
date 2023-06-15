@@ -49,6 +49,7 @@ android {
 dependencies {
     implementation(project(":features:home:impl"))
     implementation(project(":features:home:public"))
+    implementation(project(":design_system"))
 
     implementation libs.core.ktx
     implementation libs.lifecycle
