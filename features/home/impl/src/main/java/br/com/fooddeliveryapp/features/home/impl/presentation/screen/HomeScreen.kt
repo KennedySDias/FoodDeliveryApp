@@ -45,7 +45,7 @@ fun HomeScreen() {
         Surface {
             Column {
                 Column(
-                    modifier = Modifier.verticalScroll(scrollState)
+                    modifier = Modifier.verticalScroll(verticalScrollState)
                 ) {
                     TopBar()
                     Text(
